@@ -43,6 +43,17 @@
     font-weight: 500;
 }
 
+.company-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.company-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
 .achievements {
     list-style-position: inside;
     padding-left: 0;

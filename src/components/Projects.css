@@ -30,6 +30,16 @@
     color: var(--text-primary);
 }
 
+.project-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.project-title a:hover {
+    color: var(--accent-color);
+}
+
 .project-desc {
     color: var(--text-secondary);
     margin-bottom: 20px;

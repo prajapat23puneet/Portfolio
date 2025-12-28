@@ -16,7 +16,6 @@
     font-weight: 800;
     background: linear-gradient(135deg, #fff 0%, #8b949e 100%);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
 }
@@ -35,6 +34,29 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-link {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.social-link:hover {
+    color: var(--accent-color);
 }
 
 /* Responsive adjustments */

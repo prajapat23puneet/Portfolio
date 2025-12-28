@@ -12,6 +12,10 @@ const Hero = () => {
                 </p>
                 <div className="hero-actions">
                     <a href="#about" className="btn">View My Work</a>
+                    <div className="social-links">
+                        <a href="https://www.linkedin.com/in/puneet-prajapat/" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
+                        <a href="https://github.com/prajapat23puneet" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
+                    </div>
                 </div>
             </div>
         </section>

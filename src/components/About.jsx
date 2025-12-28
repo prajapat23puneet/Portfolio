@@ -18,7 +18,11 @@ const About = () => {
 
                     <div className="experience-card">
                         <h3 className="role">SDE Intern</h3>
-                        <h4 className="company">Camncloud Technologies</h4>
+                        <h4 className="company">
+                            <a href="https://drive.google.com/file/d/1JRHfShZ-YJb2-CV4gNgEXh0nfiIkdWFJ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="company-link">
+                                Camncloud Technologies ↗
+                            </a>
+                        </h4>
                         <ul className="achievements">
                             <li>Worked on YOLOv5 object detection algorithms for real-time applications.</li>
                             <li>Developed predictive models to analyze data trends and optimize decision-making.</li>
