@@ -1,0 +1,29 @@
+.contact-section {
+    background-color: var(--bg-color);
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.contact-content {
+    max-width: 600px;
+}
+
+.contact-text {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.contact-btn {
+    margin-bottom: 60px;
+    font-size: 1.1rem;
+    padding: 14px 28px;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
