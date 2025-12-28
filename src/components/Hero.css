@@ -4,7 +4,7 @@
     min-height: 100vh;
     justify-content: center;
     text-align: center;
-    background: radial-gradient(circle at center, #161b22 0%, var(--bg-color) 70%);
+    background: radial-gradient(circle at center, var(--card-bg) 0%, var(--bg-color) 100%);
 }
 
 .hero-content {
@@ -14,10 +14,19 @@
 .name {
     font-size: 4rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #fff 0%, #8b949e 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-primary);
     margin-bottom: 20px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+    cursor: default;
+}
+
+.name:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, var(--accent-color) 0%, #a371f7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .title {
