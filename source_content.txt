@@ -1,0 +1,60 @@
+# CONTACT INFO
+Name: PUNEET PRAJAPAT
+Location: Indore, Madhya Pradesh, India
+Note: Open to Pan-India Relocation
+Email: xxxxxx@gmail.com
+Phone: +91-7746-08-xxxx
+Links: LinkedIn, GitHub
+
+# EXPERIENCE
+
+## Software Development Engineer
+**Company:** Planful Inc
+**Location:** Hyd, India
+**Dates:** Aug 2024 – Dec 2025
+* Architected product-wide migration from legacy ASPX APIs to modern C# REST services, improving code maintainability and reducing technical debt across platform.
+* Designed and deployed performance monitoring internal tool handling complete frontend and backend development independently, transforming hardcoded implementation to dynamic, customizable system.
+* Elevated test suite stability from 60% to 85% success rate across 5,000 test cases within 8 weeks through comprehensive root cause analysis and systematic remediation.
+
+## Software Development Engineer Intern
+**Company:** Planful Inc
+**Location:** Hyd, India
+**Dates:** Jan 2024 – Jul 2024
+* Developed comprehensive Slack Bot integration automating critical team workflows and processes.
+* Implemented multiple Server Maintenance Tool features leveraging ag-grid framework and ASP.NET Core.
+* Collaborated extensively on API testing and validation with sophisticated automated test scenarios.
+
+## Python Developer Intern
+**Company:** Camncloud Technologies
+**Location:** Indore, India
+**Dates:** Aug 2023 – Sep 2023
+* Built advanced YOLOv5 object detection system enabling real-time image analysis capabilities.
+* Developed predictive ARIMA and LSTM models for accurate stock price forecasting and analysis.
+* Designed intelligent museum theft alert system leveraging computer vision and real-time monitoring.
+
+# EDUCATION
+
+**Bachelor of Technology, Computer Science Engineering**
+**Institute:** Acropolis Institute of Technology and Research, Indore
+**Dates:** Oct 2020 – June 2024
+**CGPA:** 7.62
+
+# TECHNICAL SKILLS
+
+**Languages:** C#, Java, Python, JavaScript, C++, SQL
+**Frontend:** React, Angular, HTML, CSS, ag-grid
+**Backend:** ASP.NET Core, ASP.NET MVC, Spring Framework
+**Testing:** Playwright Java, Automated Testing, Test Automation
+**Databases:** SQL, RDBMS, Database Design
+**Tools & Platforms:** Git, GitHub, AWS, Visual Studio, Postman
+**Core Competencies:** Full Stack Development, API Development, Test Automation, Computer Vision, DSA
+
+# ACHIEVEMENTS
+
+* Published Research Paper: Sign Language Recognition - IRJMETS (2023)
+* Letter of Recommendation - Cisco Networking Academy (2023)
+* AWS Academy Graduate Cloud Architecting Certification (2023)
+* Java Foundations Cumulative Final Exam - Oracle Academy (2022)
+
+# PROJECTS
+*(Note: No project details were listed in the uploaded file)*
