@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tilt } from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaCode, FaLock } from 'react-icons/fa';
 import './Projects.css';
@@ -44,23 +44,10 @@ const Projects = () => {
             category: "Research Paper",
             description: "Published research on using Computer Vision to bridge communication gaps for the hearing impaired. Achieved 95% accuracy.",
             tech: ["Python", "TensorFlow", "OpenCV", "Research"],
-            link: "https://www.irjmets.com/uploadedfiles/paper//issue_4_april_2023/36269/final/fin_irjmets1681992577.pdf",
+            link: "https://www.irjmets.com/",
             github: null
         }
     ];
-
-    // 3D Tilt Options
-    const defaultOptions = {
-        reverse: false,  // reverse the tilt direction
-        max: 15,     // max tilt rotation (degrees)
-        perspective: 1000,   // Transform perspective, the lower the more extreme the tilt gets.
-        scale: 1.02,    // 2 = 200%, 1.5 = 150%, etc..
-        speed: 1000,   // Speed of the enter/exit transition
-        transition: true,   // Set a transition on enter/exit.
-        axis: null,   // What axis should be disabled. Can be X or Y.
-        reset: true,    // If the tilt effect has to be reset on exit.
-        easing: "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
-    }
 
     return (
         <section id="projects" className="projects-section">
@@ -76,7 +63,13 @@ const Projects = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
-                            <Tilt options={defaultOptions} className="project-card-tilt">
+                            <Tilt
+                                tiltMaxAngleX={10}
+                                tiltMaxAngleY={10}
+                                scale={1.02}
+                                transitionSpeed={1000}
+                                className="project-card-tilt"
+                            >
                                 <div className="project-card glass">
                                     <div className="card-header">
                                         <div className="folder-icon">
@@ -84,13 +77,18 @@ const Projects = () => {
                                         </div>
                                         <div className="card-links">
                                             {project.github && (
-                                                <a href={project.github} target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
+                                                <a href={project.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+                                                    <FaGithub />
+                                                </a>
                                             )}
                                             {project.link && (
-                                                <a href={project.link} target="_blank" rel="noreferrer" aria-label="Live Demo"><FaExternalLinkAlt /></a>
+                                                <a href={project.link} target="_blank" rel="noreferrer" aria-label="Live Demo">
+                                                    <FaExternalLinkAlt />
+                                                </a>
                                             )}
+                                            {/* NDA Badge if no links exist */}
                                             {(!project.github && !project.link) && (
-                                                <div className="nda-badge">
+                                                <div className="nda-badge" title="Proprietary Project">
                                                     <FaLock /> <span>Internal</span>
                                                 </div>
                                             )}
