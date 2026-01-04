@@ -1,5 +1,5 @@
 .projects-section {
-    background-color: var(--card-bg);
+    /* background-color removed to use global body gradient */
 }
 
 .projects-grid {
@@ -9,7 +9,6 @@
 }
 
 .project-card {
-    background-color: var(--bg-color);
     padding: 2rem;
     border-radius: 0.75rem;
     border: 1px solid var(--border-color);

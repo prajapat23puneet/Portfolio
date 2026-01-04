@@ -7,7 +7,7 @@ const Projects = () => {
             <div className="container">
                 <h2 className="section-title">Achievements & Projects</h2>
                 <div className="projects-grid">
-                    <div className="project-card">
+                    <div className="project-card glass">
                         <h3 className="project-title">
                             <a href="https://www.irjmets.com/uploadedfiles/paper//issue_4_april_2023/36269/final/fin_irjmets1681992577.pdf" target="_blank" rel="noopener noreferrer">
                                 'Sign Language Recognition' Research Paper ↗
@@ -23,7 +23,7 @@ const Projects = () => {
                         </div>
                     </div>
 
-                    <div className="project-card">
+                    <div className="project-card glass">
                         <h3 className="project-title">
                             <a href="https://www.credly.com/badges/29711874-b666-44e7-a1e6-3858daea357e/print" target="_blank" rel="noopener noreferrer">
                                 AWS Academy Graduate Cloud Architecting ↗
@@ -39,7 +39,7 @@ const Projects = () => {
                         </div>
                     </div>
 
-                    <div className="project-card">
+                    <div className="project-card glass">
                         <h3 className="project-title">
                             <a href="https://drive.google.com/file/d/1OYLHDu8Cf_CKnzm-83jqugO73GRulWLC/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                                 Cisco Networking Academy LoR ↗
@@ -54,7 +54,7 @@ const Projects = () => {
                         </div>
                     </div>
 
-                    <div className="project-card">
+                    <div className="project-card glass">
                         <h3 className="project-title">
                             <a href="https://drive.google.com/file/d/1ZzWFP6dhuQR3LNyimNZDm4g5srwjRcfE/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                                 Java Foundations Certificate ↗

@@ -1,5 +1,5 @@
 .skills-section {
-    background-color: var(--bg-color);
+    /* background-color removed to use global body gradient */
 }
 
 .skills-grid {
@@ -9,7 +9,6 @@
 }
 
 .skill-category {
-    background-color: var(--card-bg);
     padding: 1.5rem;
     border-radius: 0.75rem;
     border: 1px solid var(--border-color);

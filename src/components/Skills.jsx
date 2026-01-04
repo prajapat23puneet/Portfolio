@@ -15,7 +15,7 @@ const Skills = () => {
                 <h2 className="section-title">Technical Skills</h2>
                 <div className="skills-grid">
                     {Object.entries(skillsData).map(([category, skills]) => (
-                        <div key={category} className="skill-category">
+                        <div key={category} className="skill-category glass">
                             <h3 className="category-title">{category}</h3>
                             <div className="skill-tags">
                                 {skills.map((skill) => (
