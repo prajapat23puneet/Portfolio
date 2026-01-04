@@ -1,20 +1,79 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 import './Hero.css';
+import avatarLight from '../assets/avatar-light.png';
+import avatarDark from '../assets/avatar-dark.png';
 
 const Hero = () => {
+    const [theme, setTheme] = useState('dark');
+
+    useEffect(() => {
+        const updateTheme = () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+            setTheme(currentTheme);
+        };
+
+        // Initial check
+        updateTheme();
+
+        // Observer for theme changes
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+                    updateTheme();
+                }
+            });
+        });
+
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme'],
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
+    const avatar = theme === 'light' ? avatarLight : avatarDark;
+
     return (
         <section id="hero" className="hero-section">
-            <div className="container hero-content">
-                <h1 className="name">Puneet Prajapat</h1>
-                <h2 className="title">Software Development Engineer <span className="text-secondary">|</span> Full Stack & API Development</h2>
-                <p className="tagline">
-                    Specializing in modernizing legacy systems, API development, and test automation.
-                </p>
-                <div className="hero-actions">
-                    <a href="#about" className="btn">View My Work</a>
-                    <div className="social-links">
-                        <a href="https://www.linkedin.com/in/puneet-prajapat/" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
-                        <a href="https://github.com/prajapat23puneet" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
+            <div className="container hero-container">
+                <div className="hero-text">
+                    <h1 className="name">Hi, I'm <span className="name-gradient">Puneet Prajapat</span></h1>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+                        <h2 className="title">Software Development Engineer</h2>
+                    </motion.div>
+
+                    <p className="tagline">
+                        Software Development Engineer with expertise in modernizing legacy systems. At Planful Inc, I architected product-wide migrations from ASPX to C# REST services and built performance monitoring tools that enhanced system reliability.
+                    </p>
+                    <div className="hero-actions">
+                        <a href="#projects" className="btn">View Work</a>
+                        <a href="#contact" className="btn">Contact Me</a>
+                    </div>
+                </div>
+
+                <div className="hero-visuals">
+                    <div className="hero-image-container">
+                        <div className="glass-card-back glass"></div>
+                        <motion.img
+                            src={avatar}
+                            alt="Puneet Prajapat Avatar"
+                            className="hero-avatar"
+                            animate={{
+                                y: [0, -20, 0],
+                            }}
+                            transition={{
+                                duration: 6,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                            }}
+                            whileHover={{ scale: 1.05 }}
+                        />
                     </div>
                 </div>
             </div>

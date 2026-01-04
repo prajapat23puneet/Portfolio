@@ -1,6 +1,5 @@
 .about-section {
-    background-color: var(--card-bg);
-    /* Alternate background */
+    /* background-color removed to use global body gradient */
 }
 
 .section-title {
@@ -31,7 +30,6 @@
 
 .experience-card,
 .education-card {
-    background-color: var(--bg-color);
     padding: 30px;
     border-radius: 12px;
     border: 1px solid var(--border-color);

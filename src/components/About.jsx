@@ -7,7 +7,7 @@ const About = () => {
             <div className="container">
                 <h2 className="section-title">Experience</h2>
                 <div className="experience-grid">
-                    <div className="experience-card">
+                    <div className="experience-card glass">
                         <div className="card-header">
                             <h3 className="role">Software Development Engineer</h3>
                             <span className="date">Aug 2024 – Dec 2025</span>
@@ -20,7 +20,7 @@ const About = () => {
                         </ul>
                     </div>
 
-                    <div className="experience-card">
+                    <div className="experience-card glass">
                         <div className="card-header">
                             <h3 className="role">Software Development Engineer Intern</h3>
                             <span className="date">Jan 2024 – Jul 2024</span>
@@ -33,7 +33,7 @@ const About = () => {
                         </ul>
                     </div>
 
-                    <div className="experience-card">
+                    <div className="experience-card glass">
                         <div className="card-header">
                             <h3 className="role">SDE Intern</h3>
                             <span className="date">Aug 2023 – Sep 2023</span>
@@ -51,7 +51,7 @@ const About = () => {
                 </div>
 
                 <h2 className="section-title education-title">Education</h2>
-                <div className="education-card">
+                <div className="education-card glass">
                     <div className="card-header">
                         <h3 className="degree">Bachelor of Technology in Computer Science Engineering</h3>
                         <span className="date">2020 – 2024</span>

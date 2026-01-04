@@ -1,5 +1,5 @@
 .contact-section {
-    background-color: var(--bg-color);
+    /* background-color removed to use global body gradient */
     text-align: center;
     padding-top: 5rem;
     padding-bottom: 2.5rem;
@@ -8,6 +8,10 @@
 .contact-content {
     max-width: 600px;
     margin: 0 auto;
+    padding: 2.5rem;
+    /* Added padding for glass card */
+    border-radius: 12px;
+    /* Added border-radius */
 }
 
 .contact-text {
@@ -24,8 +28,14 @@
 
 .footer-bottom {
     margin-top: 2.5rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--border-color);
+    padding: 1.5rem;
+    /* Adjusted padding */
+    border-radius: 12px;
+    /* Added border-radius */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    /* Consitent width with contact card */
     color: var(--text-secondary);
     font-size: 0.9rem;
 }
