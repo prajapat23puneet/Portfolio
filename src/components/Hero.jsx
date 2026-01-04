@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import './Hero.css';
-import avatarLight from '../assets/avatar-light.png';
-import avatarDark from '../assets/avatar-dark.png';
+
+const avatarDark = "/images/avatar-dark.png";
+const avatarLight = "/images/avatar-light.png";
+const cardDark = "/images/tech-card-dark.png";
+const cardLight = "/images/tech-card-light.png";
 
 const Hero = () => {
     const [theme, setTheme] = useState('dark');
@@ -34,6 +37,7 @@ const Hero = () => {
     }, []);
 
     const avatar = theme === 'light' ? avatarLight : avatarDark;
+    const cardImage = theme === 'light' ? cardLight : cardDark;
 
     return (
         <section id="hero" className="hero-section">
@@ -59,9 +63,13 @@ const Hero = () => {
 
                 <div className="hero-visuals">
                     <div className="hero-image-container">
-                        <div className="hero-glass-card"></div>
+                        <div
+                            className="hero-glass-card"
+                            style={{ backgroundImage: `url(${cardImage})` }}
+                        ></div>
                         <motion.img
                             src={avatar}
+                            fetchPriority="high"
                             alt="Puneet Prajapat Avatar"
                             className="hero-avatar"
                             animate={{

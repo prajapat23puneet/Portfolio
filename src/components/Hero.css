@@ -88,7 +88,6 @@
     height: 400px;
     z-index: 0;
     /* Deep Glass Effect */
-    background-image: var(--hero-card-img);
     background-color: var(--card-bg);
     /* Fallback/Tint */
     background-size: cover;
