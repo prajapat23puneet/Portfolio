@@ -2,8 +2,8 @@
 :root {
   /* Dark Mode Palette (Synthwave) */
   --bg-color: #050505;
-  --bg-gradient-start: #2d1b69;
-  --bg-gradient-end: #1a1a2e;
+  --bg-gradient-start: #0f0c29;
+  --bg-gradient-end: #302b63;
   --text-primary: #ffffff;
   --text-secondary: #a1a1aa;
   --accent-color: #00f2ea;
@@ -19,8 +19,8 @@
 [data-theme='light'] {
   /* Light Mode Palette (Clean Tech) */
   --bg-color: #ffffff;
-  --bg-gradient-start: #e0f2fe;
-  --bg-gradient-end: #f1f5f9;
+  --bg-gradient-start: #ffffff;
+  --bg-gradient-end: #e0eafc;
   --text-primary: #0f172a;
   --text-secondary: #64748b;
   --accent-color: #0ea5e9;
