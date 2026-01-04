@@ -82,20 +82,28 @@
     align-items: center;
 }
 
-.glass-card-back {
+.hero-glass-card {
     position: absolute;
     width: 300px;
     height: 400px;
-    border-radius: 20px;
     z-index: 0;
-    /* Glass Effect */
+    /* Deep Glass Effect */
     background-image: var(--hero-card-img);
+    background-color: var(--card-bg);
+    /* Fallback/Tint */
     background-size: cover;
     background-position: center;
-    /* Ensure glass transparency interaction */
+
+    /* Smooth corners */
+    border-radius: 24px;
+
+    /* Glass properties */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+    /* Border and Shadow */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .hero-avatar {

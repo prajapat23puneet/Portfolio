@@ -59,7 +59,7 @@ const Hero = () => {
 
                 <div className="hero-visuals">
                     <div className="hero-image-container">
-                        <div className="glass-card-back glass"></div>
+                        <div className="hero-glass-card"></div>
                         <motion.img
                             src={avatar}
                             alt="Puneet Prajapat Avatar"
