@@ -10,7 +10,7 @@ const Contact = () => {
                     <p className="contact-text">
                         I'm currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open!
                     </p>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Punittheprajapat@gmail.com" target="_blank" rel="noopener noreferrer" className="btn contact-btn">Say Hello</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=puneetcodes@gmail.com" target="_blank" rel="noopener noreferrer" className="btn contact-btn">Say Hello</a>
                 </div>
                 <div className="footer-bottom glass">
                     <p>© {new Date().getFullYear()} Puneet Prajapat. All Rights Reserved.</p>
