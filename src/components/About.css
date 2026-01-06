@@ -31,8 +31,8 @@
 .experience-card,
 .education-card {
     padding: 30px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
+    /* border-radius: 12px; handled by .glass */
+    /* border: 1px solid var(--border-color); handled by .glass */
     transition: transform 0.2s, box-shadow 0.2s;
 }
 

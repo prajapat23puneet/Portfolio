@@ -37,7 +37,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--card-bg);
+    /* background: var(--card-bg); handled by .glass */
     border-radius: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;

@@ -42,7 +42,7 @@ const ThemeToggle = () => {
 
     return (
         <button
-            className="theme-toggle"
+            className="theme-toggle glass"
             onClick={toggleTheme}
             aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
         >

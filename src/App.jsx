@@ -9,6 +9,8 @@ import ThemeToggle from './components/ThemeToggle';
 function App() {
   return (
     <div className="App">
+      <div className="ambient-blob blob-1"></div>
+      <div className="ambient-blob blob-2"></div>
       <ThemeToggle />
       <Hero />
       <About />

@@ -17,9 +17,9 @@
 }
 
 .project-card {
-    background: var(--card-bg);
+    /* background: var(--card-bg); handled by .glass */
     /* Master Glass Variable */
-    border: 1px solid var(--border-color);
+    /* border: 1px solid var(--border-color); handled by .glass */
     border-radius: 16px;
     padding: 2rem;
     height: 100%;

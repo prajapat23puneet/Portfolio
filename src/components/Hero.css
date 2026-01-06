@@ -87,22 +87,9 @@
     width: 300px;
     height: 400px;
     z-index: 0;
-    /* Deep Glass Effect */
-    background-color: var(--card-bg);
-    /* Fallback/Tint */
+    /* Styles now handled by .glass utility */
     background-size: cover;
     background-position: center;
-
-    /* Smooth corners */
-    border-radius: 24px;
-
-    /* Glass properties */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    /* Border and Shadow */
-    border: 1px solid var(--border-color);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .hero-avatar {
