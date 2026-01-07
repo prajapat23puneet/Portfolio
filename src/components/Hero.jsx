@@ -64,7 +64,7 @@ const Hero = () => {
                 <div className="hero-visuals">
                     <div className="hero-image-container">
                         <div
-                            className="hero-glass-card"
+                            className="hero-glass-card glass"
                             style={{ backgroundImage: `url(${cardImage})` }}
                         ></div>
                         <motion.img

@@ -31,16 +31,14 @@
 .experience-card,
 .education-card {
     padding: 30px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
+    /* border-radius: 12px; handled by .glass */
+    /* border: 1px solid var(--border-color); handled by .glass */
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .experience-card:hover,
 .education-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border-color: var(--accent-color);
+    /* Transform and shadow handled by .glass:hover */
 }
 
 .card-header {

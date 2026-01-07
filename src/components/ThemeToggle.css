@@ -3,13 +3,9 @@
     top: 2rem;
     right: 2rem;
     bottom: auto;
+    bottom: auto;
     /* Reset bottom */
-    background-color: rgba(22, 27, 34, 0.6);
-    /* Dark mode default glass */
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* background-color etc removed for .glass */
     color: var(--text-primary);
     width: 48px;
     height: 48px;
@@ -25,10 +21,7 @@
 }
 
 [data-theme='light'] .theme-toggle {
-    background-color: rgba(255, 255, 255, 0.5);
-    /* Light mode glass */
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* light mode styles removed for .glass */
 }
 
 .theme-toggle:hover {

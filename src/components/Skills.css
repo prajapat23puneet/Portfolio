@@ -37,8 +37,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--card-bg);
-    border-radius: 1rem;
+    /* background: var(--card-bg); handled by .glass */
+    /* border-radius handled by .glass */
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
@@ -70,7 +70,7 @@
 
 /* Hover Effects */
 .skill-card:hover {
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    /* box-shadow handled by .glass */
     border-color: var(--glow-color);
 }
 
