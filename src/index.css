@@ -1,7 +1,6 @@
 /* Global Styles & Variables */
 :root {
-  /* Dark Mode Palette (Synthwave/Cyberpunk) */
-  --bg-color: #050505;
+  /* Dark Mode Palette (Synthwave - Default) */
   --bg-gradient: radial-gradient(circle at top left, #1A1A2E, #0F0F1A);
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
@@ -11,30 +10,25 @@
   --accent-color: #8A2BE2;
   /* Amethyst */
   --accent-hover: #9932CC;
-  --card-bg: rgba(20, 20, 30, 0.6);
-  /* Fallback */
-  --hero-card-img: url('./assets/tech-card-dark.png');
-  --backdrop-blur: blur(16px);
+
   --font-header: 'Montserrat', sans-serif;
   --font-body: 'Roboto', sans-serif;
 }
 
 [data-theme='light'] {
   /* Light Mode Palette (Clean/Frost) */
-  --bg-color: #ffffff;
   --bg-gradient: linear-gradient(135deg, #F0F2F5 0%, #FFFFFF 100%);
-  --glass-bg: rgba(255, 255, 255, 0.65);
-  --glass-border: rgba(255, 255, 255, 0.6);
-  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-  --text-primary: #2D3748;
-  /* Dark Slate */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  /* Low opacity for true glass feel */
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for contrast */
+  --text-primary: #0f172a;
+  /* Darker for accessibility */
   --text-secondary: #4A5568;
-  --accent-color: #6A5ACD;
-  /* Slate Blue */
-  --accent-hover: #7B68EE;
-  --card-bg: rgba(255, 255, 255, 0.6);
-  /* Fallback */
-  --hero-card-img: url('./assets/tech-card-light.png');
+  --accent-color: #2563EB;
+  /* Vibrant Blue - Retrying this fix */
+  --accent-hover: #1D4ED8;
 }
 
 * {
@@ -47,7 +41,6 @@ body {
   font-family: var(--font-body);
   background: var(--bg-gradient);
   background-attachment: fixed;
-  /* Keeps gradient fixed during scroll */
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -80,7 +73,6 @@ a:hover {
   max-width: 1400px;
   width: 90%;
   margin: 0 auto;
-  padding: 0;
 }
 
 section {
@@ -93,23 +85,24 @@ section {
   }
 }
 
-/* Utilities */
+/* Glass Utility */
 .glass {
   background: var(--glass-bg);
-  backdrop-filter: var(--backdrop-blur);
-  -webkit-backdrop-filter: var(--backdrop-blur);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   border-radius: 1.5rem;
-  /* rounded-3xl */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .glass:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.2);
+  /* Enhanced shadow on hover */
 }
 
+/* Helper Utilities */
 .text-accent {
   color: var(--accent-color);
 }
@@ -121,8 +114,6 @@ section {
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  background-color: rgba(88, 166, 255, 0.15);
-  /* Keep base transparency or switch to accent transparent? usage check */
   background: transparent;
   color: var(--accent-color);
   border-radius: 6px;
@@ -130,10 +121,8 @@ section {
   transition: all 0.2s ease;
   border: 1px solid var(--accent-color);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  /* Slight glow hint */
 }
 
 .btn:hover {
@@ -143,7 +132,7 @@ section {
   box-shadow: 0 0 15px var(--accent-color);
 }
 
-/* Ambient Blobs */
+/* Ambient Blobs (for App.jsx) */
 .ambient-blob {
   position: fixed;
   border-radius: 50%;

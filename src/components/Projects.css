@@ -20,7 +20,7 @@
     /* background: var(--card-bg); handled by .glass */
     /* Master Glass Variable */
     /* border: 1px solid var(--border-color); handled by .glass */
-    border-radius: 16px;
+    /* border-radius handled by .glass */
     padding: 2rem;
     height: 100%;
     display: flex;
@@ -32,6 +32,12 @@
 }
 
 .project-card:hover {
+    /* border-color handled by .glass hover or keep? .glass doesn't change border color usually. 
+       Let's keep accent border on hover if desired, but .glass handles shadow/transform.
+       The prompt says "Ensure hover effects (tilt/lift) utilize the new .glass:hover transition."
+       .glass:hover adds shadow and lift.
+       I will keep the border color change as an extra feature.
+    */
     border-color: var(--accent-color);
 }
 

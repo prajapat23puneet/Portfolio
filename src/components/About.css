@@ -38,9 +38,7 @@
 
 .experience-card:hover,
 .education-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border-color: var(--accent-color);
+    /* Transform and shadow handled by .glass:hover */
 }
 
 .card-header {
