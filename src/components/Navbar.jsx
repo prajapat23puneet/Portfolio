@@ -1,27 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useTheme } from '../contexts/ThemeContext';
 import './Navbar.css';
 
 const Navbar = () => {
-    const [theme, setTheme] = useState('dark');
+    const { theme, toggleTheme } = useTheme();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-
-    // Theme Logic
-    useEffect(() => {
-        const savedTheme = localStorage.getItem('theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const initialTheme = savedTheme ? savedTheme : (systemPrefersDark ? 'dark' : 'light');
-
-        setTheme(initialTheme);
-        document.documentElement.setAttribute('data-theme', initialTheme);
-    }, []);
-
-    const toggleTheme = () => {
-        const newTheme = theme === 'dark' ? 'light' : 'dark';
-        setTheme(newTheme);
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-    };
 
     // Scroll Effect
     useEffect(() => {
@@ -33,8 +17,8 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'About', href: '#about' },
-        { name: 'Experience', href: '#experience' }, // Assuming Experience is part of About or separate? Prompt says "About, Experience, Skills, Projects, Contact". Need to check if IDs exist.
+        { name: 'About', href: '#' },
+        { name: 'Experience', href: '#about' },
         { name: 'Skills', href: '#skills' },
         { name: 'Projects', href: '#projects' },
         { name: 'Contact', href: '#contact' },
@@ -43,11 +27,39 @@ const Navbar = () => {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     const closeMenu = () => setIsMenuOpen(false);
 
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        closeMenu(); // Close mobile menu if open
+
+        if (href === '#') {
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            return;
+        }
+
+        const targetId = href.substring(1); // Remove the #
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            const currentScroll = window.scrollY;
+            const targetScroll = targetElement.offsetTop;
+            const scrollDirection = targetScroll > currentScroll ? 'down' : 'up';
+
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="navbar-container">
                 <div className="logo">
-                    <a href="#">Puneet Prajapat</a>
+                    <a href="#" onClick={(e) => handleNavClick(e, '#')}>Puneet Prajapat</a>
                 </div>
 
                 {/* Desktop Menu */}
@@ -55,7 +67,7 @@ const Navbar = () => {
                     <ul className="nav-links">
                         {navLinks.map((link) => (
                             <li key={link.name}>
-                                <a href={link.href}>{link.name}</a>
+                                <a href={link.href} onClick={(e) => handleNavClick(e, link.href)}>{link.name}</a>
                             </li>
                         ))}
                     </ul>
@@ -92,7 +104,7 @@ const Navbar = () => {
                 <ul className="mobile-nav-links">
                     {navLinks.map((link) => (
                         <li key={link.name}>
-                            <a href={link.href} onClick={closeMenu}>{link.name}</a>
+                            <a href={link.href} onClick={(e) => handleNavClick(e, link.href)}>{link.name}</a>
                         </li>
                     ))}
                 </ul>
