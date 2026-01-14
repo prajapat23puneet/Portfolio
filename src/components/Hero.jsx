@@ -1,40 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useTheme } from '../contexts/ThemeContext';
 import './Hero.css';
 
-const avatarDark = "/images/avatar-dark.png";
-const avatarLight = "/images/avatar-light.png";
-const cardDark = "/images/tech-card-dark.png";
-const cardLight = "/images/tech-card-light.png";
+const avatarDark = "/images/avatar-dark.webp";
+const avatarLight = "/images/avatar-light.webp";
+const cardDark = "/images/tech-card-dark.webp";
+const cardLight = "/images/tech-card-light.webp";
 
 const Hero = () => {
-    const [theme, setTheme] = useState('dark');
-
-    useEffect(() => {
-        const updateTheme = () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-            setTheme(currentTheme);
-        };
-
-        // Initial check
-        updateTheme();
-
-        // Observer for theme changes
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
-                    updateTheme();
-                }
-            });
-        });
-
-        observer.observe(document.documentElement, {
-            attributes: true,
-            attributeFilter: ['data-theme'],
-        });
-
-        return () => observer.disconnect();
-    }, []);
+    const { theme } = useTheme();
 
     const avatar = theme === 'light' ? avatarLight : avatarDark;
     const cardImage = theme === 'light' ? cardLight : cardDark;

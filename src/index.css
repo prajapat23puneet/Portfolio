@@ -37,6 +37,11 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for sticky navbar */
+}
+
 body {
   font-family: var(--font-body);
   background: var(--bg-gradient);

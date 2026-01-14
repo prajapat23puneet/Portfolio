@@ -2,6 +2,7 @@ import React from 'react';
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaCode, FaLock } from 'react-icons/fa';
+import SectionWrapper from './SectionWrapper';
 import './Projects.css';
 
 const Projects = () => {
@@ -50,11 +51,8 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="projects-section">
-            <div className="container">
-                <h2 className="section-title">Case Studies</h2>
-
-                <div className="projects-grid">
+        <SectionWrapper id="projects" title="Case Studies">
+            <div className="projects-grid">
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
@@ -77,12 +75,12 @@ const Projects = () => {
                                         </div>
                                         <div className="card-links">
                                             {project.github && (
-                                                <a href={project.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+                                                <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                                                     <FaGithub />
                                                 </a>
                                             )}
                                             {project.link && (
-                                                <a href={project.link} target="_blank" rel="noreferrer" aria-label="Live Demo">
+                                                <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label="Live Demo">
                                                     <FaExternalLinkAlt />
                                                 </a>
                                             )}
@@ -110,9 +108,8 @@ const Projects = () => {
                             </Tilt>
                         </motion.div>
                     ))}
-                </div>
             </div>
-        </section>
+        </SectionWrapper>
     );
 };
 

@@ -5,6 +5,7 @@ import { FaReact, FaAngular, FaHtml5, FaCss3, FaJava, FaPython, FaAws, FaGitAlt,
 import { SiDotnet, SiSpring, SiJavascript, SiTypescript, SiPostman, SiMysql } from 'react-icons/si';
 import { TbBrandCSharp } from 'react-icons/tb';
 import { DiMsqlServer } from 'react-icons/di';
+import SectionWrapper from './SectionWrapper';
 
 const skillsData = {
     "Frontend": [
@@ -35,33 +36,30 @@ const skillsData = {
 
 const Skills = () => {
     return (
-        <section id="skills" className="skills-section">
-            <div className="container">
-                <h2 className="section-title">Technical Skills</h2>
-                <div className="skills-wrapper">
-                    {Object.entries(skillsData).map(([category, skills]) => (
-                        <div key={category} className="category-section">
-                            <h3 className="category-title">{category}</h3>
-                            <div className="skills-grid">
-                                {skills.map((skill) => (
-                                    <motion.div
-                                        key={skill.name}
-                                        className="skill-card glass"
-                                        whileHover={{ y: -5 }}
-                                        style={{ "--glow-color": skill.color }}
-                                    >
-                                        <div className="icon-wrapper" style={{ color: skill.color }}>
-                                            {skill.icon}
-                                        </div>
-                                        <span className="skill-name">{skill.name}</span>
-                                    </motion.div>
-                                ))}
-                            </div>
+        <SectionWrapper id="skills" title="Technical Skills">
+            <div className="skills-wrapper">
+                {Object.entries(skillsData).map(([category, skills]) => (
+                    <div key={category} className="category-section">
+                        <h3 className="category-title">{category}</h3>
+                        <div className="skills-grid">
+                            {skills.map((skill) => (
+                                <motion.div
+                                    key={skill.name}
+                                    className="skill-card glass"
+                                    whileHover={{ y: -5 }}
+                                    style={{ "--glow-color": skill.color }}
+                                >
+                                    <div className="icon-wrapper" style={{ color: skill.color }}>
+                                        {skill.icon}
+                                    </div>
+                                    <span className="skill-name">{skill.name}</span>
+                                </motion.div>
+                            ))}
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
-        </section>
+        </SectionWrapper>
     );
 };
 

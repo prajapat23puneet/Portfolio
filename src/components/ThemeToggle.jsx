@@ -1,44 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useTheme } from '../contexts/ThemeContext';
 import './ThemeToggle.css';
 
 const ThemeToggle = () => {
-    const [theme, setTheme] = useState('dark');
-
-    useEffect(() => {
-        // Check for saved theme
-        const savedTheme = localStorage.getItem('theme');
-
-        // Check system preference
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-        // Determine initial theme
-        const initialTheme = savedTheme
-            ? savedTheme
-            : (systemPrefersDark ? 'dark' : 'light');
-
-        setTheme(initialTheme);
-        document.documentElement.setAttribute('data-theme', initialTheme);
-
-        // Listener for system changes
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        const handleChange = (e) => {
-            if (!localStorage.getItem('theme')) {
-                const newTheme = e.matches ? 'dark' : 'light';
-                setTheme(newTheme);
-                document.documentElement.setAttribute('data-theme', newTheme);
-            }
-        };
-
-        mediaQuery.addEventListener('change', handleChange);
-        return () => mediaQuery.removeEventListener('change', handleChange);
-    }, []);
-
-    const toggleTheme = () => {
-        const newTheme = theme === 'dark' ? 'light' : 'dark';
-        setTheme(newTheme);
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-    };
+    const { theme, toggleTheme } = useTheme();
 
     return (
         <button
