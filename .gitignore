@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+master-resume.pdf
+repomix-output-portfolio.xml
+lighthouse-report.html
+repomix-output.xml
+.gitignore
+source_content.txt

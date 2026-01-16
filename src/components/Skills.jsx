@@ -1,9 +1,8 @@
 import React from 'react';
 import './Skills.css';
 import { motion } from 'framer-motion';
-import { FaReact, FaAngular, FaHtml5, FaCss3, FaJava, FaPython, FaAws, FaGitAlt, FaDocker, FaRobot } from 'react-icons/fa';
-import { SiDotnet, SiSpring, SiJavascript, SiTypescript, SiPostman, SiMysql } from 'react-icons/si';
-import { TbBrandCSharp } from 'react-icons/tb';
+import { FaReact, FaAngular, FaHtml5, FaCss3, FaJava, FaPython, FaAws, FaGitAlt, FaDocker, FaRobot, FaTable, FaServer, FaCode, FaProjectDiagram, FaPlug } from 'react-icons/fa';
+import { SiDotnet, SiSpring, SiJavascript, SiTypescript, SiPostman, SiMysql, SiPostgresql, SiRedis, SiRabbitmq, SiGithubactions } from 'react-icons/si';
 import { DiMsqlServer } from 'react-icons/di';
 import SectionWrapper from './SectionWrapper';
 
@@ -14,14 +13,21 @@ const skillsData = {
         { name: "HTML5", icon: <FaHtml5 />, color: "#E34F26" },
         { name: "CSS3", icon: <FaCss3 />, color: "#1572B6" },
         { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
-        { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" }
+        { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
+        { name: "ag-grid", icon: <FaTable />, color: "#1E88E5" }
     ],
     "Backend": [
-        { name: "C#", icon: <TbBrandCSharp />, color: "#239120" },
         { name: ".NET", icon: <SiDotnet />, color: "#512BD4" },
         { name: "Java", icon: <FaJava />, color: "#007396" },
         { name: "Spring", icon: <SiSpring />, color: "#6DB33F" },
         { name: "Python", icon: <FaPython />, color: "#3776AB" },
+        { name: "gRPC", icon: <FaPlug />, color: "#244C5A" },
+        { name: "MassTransit", icon: <FaProjectDiagram />, color: "#512BD4" },
+        { name: "RabbitMQ", icon: <SiRabbitmq />, color: "#FF6600" }
+    ],
+    "Data & Storage": [
+        { name: "PostgreSQL", icon: <SiPostgresql />, color: "#336791" },
+        { name: "Redis", icon: <SiRedis />, color: "#DC382D" },
         { name: "MySQL", icon: <SiMysql />, color: "#4479A1" },
         { name: "SQL Server", icon: <DiMsqlServer />, color: "#CC2927" }
     ],
@@ -29,8 +35,11 @@ const skillsData = {
         { name: "AWS", icon: <FaAws />, color: "#FF9900" },
         { name: "Docker", icon: <FaDocker />, color: "#2496ED" },
         { name: "Git", icon: <FaGitAlt />, color: "#F05032" },
+        { name: "GitHub Actions", icon: <SiGithubactions />, color: "#2088FF" },
         { name: "Postman", icon: <SiPostman />, color: "#FF6C37" },
-        { name: "Playwright", icon: <FaRobot />, color: "#2EAD33" }
+        { name: "Playwright", icon: <FaRobot />, color: "#2EAD33" },
+        { name: "n8n", icon: <FaCode />, color: "#FF6D5A" },
+        { name: "YARP", icon: <FaServer />, color: "#512BD4" }
     ]
 };
 

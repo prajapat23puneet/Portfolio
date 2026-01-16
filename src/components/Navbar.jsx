@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import './Navbar.css';
+
+const RESUME_LINK = "https://drive.google.com/file/d/1TO6iYI4ZmHtLO-G6hTCsJdTZB8tHgx2a/view?usp=sharing";
 
 const Navbar = () => {
     const { theme, toggleTheme } = useTheme();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const navRef = useRef(null);
 
     // Scroll Effect
     useEffect(() => {
@@ -15,6 +18,25 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    // Close mobile menu when clicking outside the navbar / menu
+    useEffect(() => {
+        if (!isMenuOpen) return;
+
+        const handleClickOutside = (event) => {
+            if (navRef.current && !navRef.current.contains(event.target)) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('touchstart', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
+        };
+    }, [isMenuOpen]);
 
     const navLinks = [
         { name: 'About', href: '#' },
@@ -56,7 +78,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+        <nav ref={navRef} className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="navbar-container">
                 <div className="logo">
                     <a href="#" onClick={(e) => handleNavClick(e, '#')}>Puneet Prajapat</a>
@@ -71,6 +93,14 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
+                    <a
+                        href={RESUME_LINK}
+                        className="btn resume-btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Resume
+                    </a>
                     <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
                         {theme === 'dark' ? (
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
@@ -107,6 +137,17 @@ const Navbar = () => {
                             <a href={link.href} onClick={(e) => handleNavClick(e, link.href)}>{link.name}</a>
                         </li>
                     ))}
+                    <li>
+                        <a
+                            href={RESUME_LINK}
+                            className="btn mobile-resume-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={closeMenu}
+                        >
+                            Resume
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
