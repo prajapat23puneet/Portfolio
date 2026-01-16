@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "dompurify": "^3.3.1",
-    "framer-motion": "^12.23.26",
+    "framer-motion": "^12.26.2",
     "helmet-csp": "^4.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
