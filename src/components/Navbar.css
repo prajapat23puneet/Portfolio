@@ -55,6 +55,10 @@
     gap: 2rem;
 }
 
+.resume-btn {
+    margin-left: 0.5rem;
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -153,12 +157,13 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 
-    /* Force Glass Effect */
-    background-color: var(--glass-bg) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px);
+    /* Enhanced Glass Effect with Theme-Aware Background */
+    background-color: var(--mobile-menu-bg) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--glass-shadow);
+    border-radius: 1rem;
 }
 
 .mobile-menu.open {
@@ -180,10 +185,17 @@
     font-size: 1.1rem;
     color: var(--text-primary);
     padding: 0.5rem;
+    transition: color 0.2s ease;
 }
 
 .mobile-nav-links li a:hover {
     color: var(--accent-color);
+}
+
+.mobile-resume-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 /* Responsive */

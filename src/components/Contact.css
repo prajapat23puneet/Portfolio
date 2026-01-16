@@ -48,3 +48,97 @@
         display: inline-block;
     }
 }
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(var(--primary-rgb), 0.1);
+    color: var(--text-primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--primary-color, #6366f1), var(--accent-color));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-4px);
+    background: rgba(var(--primary-rgb), 0.2);
+    box-shadow: 0 8px 16px rgba(var(--primary-rgb), 0.3);
+}
+
+.social-link:hover::before {
+    opacity: 1;
+}
+
+.social-link svg {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover svg {
+    color: var(--primary-color, #6366f1);
+    filter: drop-shadow(0 0 8px var(--primary-color, #6366f1));
+}
+
+/* Theme-specific colors */
+[data-theme="light"] .social-link {
+    color: #1a1a1a;
+}
+
+[data-theme="dark"] .social-link {
+    color: #ffffff;
+}
+
+[data-theme="light"] .social-link:hover svg {
+    color: var(--primary-color, #6366f1);
+}
+
+[data-theme="dark"] .social-link:hover svg {
+    color: var(--primary-color, #818cf8);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 1.25rem;
+    }
+
+    .social-link {
+        width: 44px;
+        height: 44px;
+    }
+
+    .social-link svg {
+        width: 22px;
+        height: 22px;
+    }
+}

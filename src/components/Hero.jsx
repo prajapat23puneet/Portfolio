@@ -7,6 +7,7 @@ const avatarDark = "/images/avatar-dark.webp";
 const avatarLight = "/images/avatar-light.webp";
 const cardDark = "/images/tech-card-dark.webp";
 const cardLight = "/images/tech-card-light.webp";
+const RESUME_LINK = "https://drive.google.com/file/d/1TO6iYI4ZmHtLO-G6hTCsJdTZB8tHgx2a/view?usp=sharing";
 
 const Hero = () => {
     const { theme } = useTheme();
@@ -32,6 +33,14 @@ const Hero = () => {
                     </p>
                     <div className="hero-actions">
                         <a href="#projects" className="btn">View Work</a>
+                        <a
+                            href={RESUME_LINK}
+                            className="btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Resume
+                        </a>
                         <a href="#contact" className="btn">Contact Me</a>
                     </div>
                 </div>

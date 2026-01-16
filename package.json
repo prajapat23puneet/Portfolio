@@ -7,24 +7,32 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "security-audit": "npm audit",
+    "security-fix": "npm audit fix",
+    "update-deps": "npm update"
   },
   "dependencies": {
+    "dompurify": "^3.3.1",
     "framer-motion": "^12.23.26",
+    "helmet-csp": "^4.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-icons": "^5.5.0",
-    "react-parallax-tilt": "^1.7.315"
+    "react-parallax-tilt": "^1.7.315",
+    "validator": "^13.15.26"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-legacy": "^7.2.1",
     "@vitejs/plugin-react": "^5.1.1",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "terser": "^5.46.0",
     "vite": "^7.2.4"
   }
 }

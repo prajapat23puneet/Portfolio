@@ -10,9 +10,16 @@
   --accent-color: #8A2BE2;
   /* Amethyst */
   --accent-hover: #9932CC;
+  --mobile-menu-bg: rgba(20, 20, 35, 0.9);
+  /* Dark, opaque background for mobile menu readability */
 
   --font-header: 'Montserrat', sans-serif;
   --font-body: 'Roboto', sans-serif;
+
+  --primary-rgb: 129, 140, 248;
+  /* Indigo-400 for Dark Mode */
+  --primary-color: #818cf8;
+  /* Define primary color explicitly if missing */
 }
 
 [data-theme='light'] {
@@ -29,6 +36,13 @@
   --accent-color: #2563EB;
   /* Vibrant Blue - Retrying this fix */
   --accent-hover: #1D4ED8;
+  --mobile-menu-bg: rgba(255, 255, 255, 0.85);
+  /* Light, milky white frosted glass for mobile menu readability */
+
+  --primary-rgb: 99, 102, 241;
+  /* Indigo-500 for Light Mode */
+  --primary-color: #6366f1;
+  /* Define primary color explicitly if missing */
 }
 
 * {
@@ -39,7 +53,8 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* Account for sticky navbar */
+  scroll-padding-top: 80px;
+  /* Account for sticky navbar */
 }
 
 body {

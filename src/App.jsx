@@ -5,6 +5,8 @@ import Hero from './components/Hero';
 import LoadingSpinner from './components/LoadingSpinner';
 import LazySection from './components/LazySection';
 
+import ErrorBoundary from './components/ErrorBoundary';
+
 // Lazy load non-critical components
 const About = lazy(() => import('./components/About'));
 const Skills = lazy(() => import('./components/Skills'));
@@ -20,18 +22,26 @@ function App() {
         <Navbar />
         <Hero />
         <Suspense fallback={<LoadingSpinner />}>
-          <LazySection fallback={null}>
-            <About />
-          </LazySection>
-          <LazySection fallback={null}>
-            <Skills />
-          </LazySection>
-          <LazySection fallback={null}>
-            <Projects />
-          </LazySection>
-          <LazySection fallback={null}>
-            <Contact />
-          </LazySection>
+          <ErrorBoundary>
+            <LazySection fallback={null}>
+              <About />
+            </LazySection>
+          </ErrorBoundary>
+          <ErrorBoundary>
+            <LazySection fallback={null}>
+              <Skills />
+            </LazySection>
+          </ErrorBoundary>
+          <ErrorBoundary>
+            <LazySection fallback={null}>
+              <Projects />
+            </LazySection>
+          </ErrorBoundary>
+          <ErrorBoundary>
+            <LazySection fallback={null}>
+              <Contact />
+            </LazySection>
+          </ErrorBoundary>
         </Suspense>
       </div>
     </ThemeProvider>

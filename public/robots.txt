@@ -1,0 +1,13 @@
+# Allow all legitimate bots
+User-agent: *
+Allow: /
+
+# Block known bad bots
+User-agent: AhrefsBot
+User-agent: MJ12bot
+User-agent: SemrushBot
+User-agent: DotBot
+Disallow: /
+
+# Sitemap
+Sitemap: https://puneet.is-a.dev/sitemap.xml

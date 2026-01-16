@@ -62,6 +62,15 @@
     gap: 20px;
 }
 
+/* Ensure hero CTA buttons align their text consistently,
+   even when some labels wrap to two lines */
+.hero-actions .btn {
+    display: flex;
+    align-items: flex-start; /* top-align text across all buttons */
+    justify-content: center;
+    text-align: center;
+}
+
 
 
 /* Right Side Visuals */
