@@ -28,7 +28,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
-          'animation': ['framer-motion'],
+          'animation': ['framer-motion', 'react-parallax-tilt'], 
           'icons': ['react-icons'],
         },
       },
@@ -36,6 +36,10 @@ export default defineConfig({
 
     // Optimize chunk size
     chunkSizeWarningLimit: 1000,
+  },
+
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion']
   },
 
   server: {
