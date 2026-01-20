@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import LoadingSpinner from './components/LoadingSpinner';
 import LazySection from './components/LazySection';
+import AvailabilityBanner from './components/AvailabilityBanner';
 
 import ErrorBoundary from './components/ErrorBoundary';
 
@@ -21,6 +22,7 @@ function App() {
         <div className="ambient-blob blob-2"></div>
         <Navbar />
         <Hero />
+        <AvailabilityBanner />
         <Suspense fallback={<LoadingSpinner />}>
           <ErrorBoundary>
             <LazySection fallback={null}>

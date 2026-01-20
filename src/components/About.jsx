@@ -28,7 +28,6 @@ const EXPERIENCE_DATA = [
         role: 'SDE Intern',
         date: 'Aug 2023 – Sep 2023',
         company: 'Camncloud Technologies',
-        companyLink: 'https://drive.google.com/file/d/1JRHfShZ-YJb2-CV4gNgEXh0nfiIkdWFJ/view?usp=sharing',
         achievements: [
             'Worked on YOLOv5 object detection algorithms for real-time applications.',
             'Developed predictive models to analyze data trends and optimize decision-making.'
