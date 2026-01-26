@@ -1,12 +1,27 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import legacy from '@vitejs/plugin-legacy';
+import viteCompression from 'vite-plugin-compression';
 
 export default defineConfig({
   plugins: [
     react(),
     legacy({
       targets: ['defaults', 'not IE 11'],
+    }),
+    // Gzip compression
+    viteCompression({
+      algorithm: 'gzip',
+      ext: '.gz',
+      threshold: 10240, // Only compress files > 10KB
+      deleteOriginFile: false,
+    }),
+    // Brotli compression (better than gzip)
+    viteCompression({
+      algorithm: 'brotliCompress',
+      ext: '.br',
+      threshold: 10240,
+      deleteOriginFile: false,
     }),
   ],
 
