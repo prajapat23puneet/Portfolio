@@ -688,8 +688,6 @@ Sitemap: https://puneet.is-a.dev/sitemap.xml
 [![GitHub](https://img.shields.io/badge/GitHub-prajapat23puneet-181717?logo=github)](https://github.com/prajapat23puneet)
 [![Email](https://img.shields.io/badge/Email-puneetcodes@gmail.com-D14836?logo=gmail&logoColor=white)](mailto:puneetcodes@gmail.com)
 
-📞 **Phone:** +91-7746-08-6888  
-🌍 **Location:** Indore, India  
 💼 **Status:** Immediate Joiner (12-15 LPA India / 15-18K AED Dubai)
 
 ---
