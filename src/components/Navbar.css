@@ -198,6 +198,10 @@
     text-align: center;
 }
 
+.mobile-resume-btn:hover {
+    color: #ffffff !important;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-desktop {
