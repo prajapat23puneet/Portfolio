@@ -1,13 +1,24 @@
-# Allow all legitimate bots
+# Robots.txt for puneet.is-a.dev
+# Allow all legitimate bots, block scrapers
+
 User-agent: *
 Allow: /
 
-# Block known bad bots
-User-agent: AhrefsBot
-User-agent: MJ12bot
-User-agent: SemrushBot
-User-agent: DotBot
+# Block AI scrapers (GPTBot, CCBot, etc.)
+User-agent: GPTBot
 Disallow: /
 
-# Sitemap
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+# Sitemap location
 Sitemap: https://puneet.is-a.dev/sitemap.xml
+
+# Crawl delay (polite rate limiting)
+Crawl-delay: 1
