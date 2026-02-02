@@ -14,6 +14,8 @@
 .project-card-tilt {
     height: 100%;
     transform-style: preserve-3d;
+    transform: translateZ(0);
+    /* Fix for Safari/Z-index issues */
 }
 
 .project-card {
@@ -27,17 +29,16 @@
     flex-direction: column;
     justify-content: space-between;
     transition: border-color 0.3s ease;
-    transform: translateZ(20px);
-    /* Internal 3D pop */
+    transform: translateZ(0);
+    /* Internal 3D pop removed to fix hit testing */
 }
 
-.project-card:hover {
-    /* border-color handled by .glass hover or keep? .glass doesn't change border color usually. 
-       Let's keep accent border on hover if desired, but .glass handles shadow/transform.
-       The prompt says "Ensure hover effects (tilt/lift) utilize the new .glass:hover transition."
-       .glass:hover adds shadow and lift.
-       I will keep the border color change as an extra feature.
-    */
+/* Override global glass hover to prevent 3D tilt vibration */
+.project-card.glass:hover {
+    transform: translateZ(0);
+    /* Keep stable found, disable glass lift */
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.2);
+    /* Keep shadow enhancement */
     border-color: var(--accent-color);
 }
 
