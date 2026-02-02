@@ -19,10 +19,6 @@
 }
 
 .project-card {
-    /* background: var(--card-bg); handled by .glass */
-    /* Master Glass Variable */
-    /* border: 1px solid var(--border-color); handled by .glass */
-    /* border-radius handled by .glass */
     padding: 2rem;
     height: 100%;
     display: flex;
@@ -30,15 +26,15 @@
     justify-content: space-between;
     transition: border-color 0.3s ease;
     transform: translateZ(0);
-    /* Internal 3D pop removed to fix hit testing */
+    /* Prevent hit testing issues */
 }
 
-/* Override global glass hover to prevent 3D tilt vibration */
+/* Prevent 3D tilt vibration */
 .project-card.glass:hover {
     transform: translateZ(0);
-    /* Keep stable found, disable glass lift */
     box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.2);
     /* Keep shadow enhancement */
+
     border-color: var(--accent-color);
 }
 

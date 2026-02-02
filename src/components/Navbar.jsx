@@ -11,7 +11,6 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const navRef = useRef(null);
 
-    // Scroll Effect
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
@@ -20,7 +19,7 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Close mobile menu when clicking outside the navbar / menu
+    // Close mobile menu on outside click
     useEffect(() => {
         if (!isMenuOpen) return;
 
@@ -85,7 +84,6 @@ const Navbar = () => {
                     <a href="#" onClick={(e) => handleNavClick(e, '#')}>Puneet Prajapat</a>
                 </div>
 
-                {/* Desktop Menu */}
                 <div className="nav-desktop">
                     <ul className="nav-links">
                         {navLinks.map((link) => (
@@ -111,7 +109,6 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                {/* Mobile Menu Actions */}
                 <div className="nav-mobile-actions">
                     <button className="theme-toggle mobile-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
                         {theme === 'dark' ? (

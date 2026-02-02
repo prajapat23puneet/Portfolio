@@ -35,7 +35,7 @@ const Contact = () => {
     }, [cooldownTime]);
 
     const handleContactClick = (e) => {
-        // Check honeypot (hidden field that bots might fill)
+        // Check honeypot
         if (isHoneypotFilled(honeypot)) {
             e.preventDefault();
             console.warn('Honeypot triggered - likely bot');
@@ -55,7 +55,7 @@ const Contact = () => {
 
     const mailtoLink = email ? `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}` : '#';
 
-    // Social links - UPDATE THESE WITH YOUR ACTUAL URLs
+    // Social Links
     const socialLinks = [
         {
             name: 'LinkedIn',
@@ -88,7 +88,7 @@ const Contact = () => {
                         I'm currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open!
                     </p>
 
-                    {/* Honeypot field - hidden from users, visible to bots */}
+                    {/* Honeypot field */}
                     <input
                         type="text"
                         name="website"

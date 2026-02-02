@@ -11,7 +11,6 @@ const preloadedImages = new Map();
  * @returns {Promise<HTMLImageElement>} - Promise that resolves when image is loaded
  */
 export const preloadImage = (src) => {
-    // Return cached image if already preloaded
     if (preloadedImages.has(src)) {
         return Promise.resolve(preloadedImages.get(src));
     }
@@ -37,19 +36,15 @@ export const preloadImages = (sources) => {
 };
 
 /**
- * Preload all theme images (both dark and light variants)
- * @returns {Promise<void>}
- */
-/**
  * Preload images for current theme only
  * @param {string} theme - 'dark' or 'light'
  * @returns {Promise<void>}
  */
 export const preloadCurrentThemeImages = (theme) => {
-    const images = theme === 'dark' 
+    const images = theme === 'dark'
         ? ['/images/avatar-dark.webp', '/images/tech-card-dark.webp']
         : ['/images/avatar-light.webp', '/images/tech-card-light.webp'];
-    
+
     return preloadImages(images).catch((error) => {
         console.warn('Theme images failed to preload:', error);
     });
@@ -64,13 +59,13 @@ export const preloadAlternateThemeImages = (currentTheme) => {
     const images = currentTheme === 'dark'
         ? ['/images/avatar-light.webp', '/images/tech-card-light.webp']
         : ['/images/avatar-dark.webp', '/images/tech-card-dark.webp'];
-    
+
     // Delay to not block initial render
     setTimeout(() => {
         preloadImages(images).catch(() => {
             // Silently fail - alternate theme will load on demand
         });
     }, 2000);
-    
+
     return Promise.resolve();
 };

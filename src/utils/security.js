@@ -1,37 +1,15 @@
-import DOMPurify from 'dompurify';
-import validator from 'validator';
-
 /**
- * Sanitize HTML content to prevent XSS attacks
- * @param {string} dirty - Unsanitized HTML string
- * @returns {string} - Sanitized HTML string
- */
-export const sanitizeHTML = (dirty) => {
-    return DOMPurify.sanitize(dirty, {
-        ALLOWED_TAGS: ['b', 'i', 'em', 'strong', 'a', 'p', 'br'],
-        ALLOWED_ATTR: ['href', 'target', 'rel'],
-    });
-};
-
-/**
- * Validate email address
- * @param {string} email - Email to validate
- * @returns {boolean} - True if valid email
- */
-export const isValidEmail = (email) => {
-    return validator.isEmail(email);
-};
-
-/**
- * Validate URL
+ * Validate URL using native URL API
  * @param {string} url - URL to validate
- * @returns {boolean} - True if valid URL
+ * @returns {boolean} - True if valid URL with http/https protocol
  */
 export const isValidURL = (url) => {
-    return validator.isURL(url, {
-        protocols: ['http', 'https'],
-        require_protocol: true,
-    });
+    try {
+        const parsed = new URL(url);
+        return ['http:', 'https:'].includes(parsed.protocol);
+    } catch (e) {
+        return false;
+    }
 };
 
 /**
@@ -65,7 +43,6 @@ class RateLimiter {
         const now = Date.now();
         const userAttempts = this.attempts.get(key) || [];
 
-        // Filter out old attempts
         const recentAttempts = userAttempts.filter(
             (timestamp) => now - timestamp < this.windowMs
         );
@@ -91,13 +68,10 @@ export const emailRateLimiter = new RateLimiter(3, 60000); // 3 attempts per min
  * @returns {boolean} - True if likely a bot
  */
 export const isProbablyBot = () => {
-    // Check if webdriver is present
     if (navigator.webdriver) return true;
 
-    // Check for common automation tools
     if (window.callPhantom || window._phantom) return true;
 
-    // Check user agent for common bot patterns
     const botPatterns = /bot|crawler|spider|crawling/i;
     if (botPatterns.test(navigator.userAgent)) return true;
 
