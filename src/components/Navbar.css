@@ -11,15 +11,10 @@
 .navbar.scrolled,
 .navbar:hover {
     /* Apply styles when scrolled or hovered */
-    /* But the prompt says "Style: Use the .glass utility but with border-radius: 0 0 1.5rem 1.5rem" */
+
 }
 
-/* We need to apply the glass effect to the container or the nav itself.
-   Prompt: "Style: Use the .glass utility but with border-radius: 0 0 1.5rem 1.5rem"
-   Let's apply it directly to the navbar class when scrolled, or always? 
-   "Create a new component... and mount it at the top... Style: Use the .glass utility..."
-   Usually sticky navs are glass always or on scroll. Assuming always for consistency with "sticky".
-*/
+
 
 .navbar {
     background: var(--glass-bg);
@@ -196,6 +191,10 @@
     display: block;
     width: 100%;
     text-align: center;
+}
+
+.mobile-resume-btn:hover {
+    color: #ffffff !important;
 }
 
 /* Responsive */

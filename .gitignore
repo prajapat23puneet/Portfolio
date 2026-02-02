@@ -25,9 +25,13 @@ dist-ssr
 master-resume.pdf
 repomix-output-portfolio.xml
 lighthouse-report.html
-repomix-output.xml
 .gitignore
 source_content.txt
 files.zip
 .claude/settings.local.json
 nul
+.aider*
+Puneet Prajapat _ Portfolio_dark.pdf
+Puneet Prajapat _ Portfolio_Light.pdf
+converted-portfolio.toon
+repomix-output.xml

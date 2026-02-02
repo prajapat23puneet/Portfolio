@@ -1,4 +1,3 @@
-import React from 'react';
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaCode, FaLock } from 'react-icons/fa';
@@ -7,7 +6,7 @@ import SecureLink from './SecureLink';
 import './Projects.css';
 
 const Projects = () => {
-    // High-Impact "Case Studies" derived from experience
+    // Project Case Studies
     const projects = [
         {
             title: "n8n Job Automator",
@@ -76,7 +75,7 @@ const Projects = () => {
                                                 <FaExternalLinkAlt />
                                             </SecureLink>
                                         )}
-                                        {/* NDA Badge if no links exist */}
+                                        {/* NDA Badge */}
                                         {(!project.github && !project.link) && (
                                             <div className="nda-badge" title="Proprietary Project">
                                                 <FaLock /> <span>Internal</span>
