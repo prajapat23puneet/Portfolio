@@ -20,7 +20,7 @@ const Projects = () => {
             category: "Distributed Systems",
             description: "A real-time \"Vibe Coding\" platform engineered for high concurrency. Features a Redis Backplane for scaling SignalR across instances, RedLock for distributed data integrity, and deployment on the Fly.io edge network.",
             tech: ["SignalR", "Redis", "React", ".NET 8", "Distributed Systems"],
-            link: "https://nexus-ide.netlify.app/",
+            link: "https://nexus-ide.vercel.app/",
             github: "https://github.com/prajapat23puneet/ide"
         },
         {
@@ -28,8 +28,24 @@ const Projects = () => {
             category: "Event-Driven Architecture",
             description: "A Distributed E-Commerce Orchestrator utilizing the Saga Pattern for long-lived transactions without 2-phase commits. Implements event-driven architecture using MassTransit, RabbitMQ, and PostgreSQL with optimistic concurrency.",
             tech: [".NET 8", "MassTransit", "RabbitMQ", "Saga Pattern", "PostgreSQL"],
-            link: "https://vyapaar-nexus.netlify.app",
+            link: "https://vyapaar-nexus.vercel.app",
             github: "https://github.com/prajapat23puneet/vyaapar-nexus-core"
+        },
+        {
+            title: "Walmart Advanced Software Engineering Simulation",
+            category: "Enterprise Architecture",
+            description: "Tackled advanced software engineering challenges at enterprise scale. Designed scalable data structures, optimized heap memory management, and architected UML diagrams for complex distributed systems with performance benchmarking.",
+            tech: ["Java", "Data Structures", "System Design", "UML", "Performance Optimization"],
+            link: "https://www.theforage.com/completion-certificates/prBZoAihniNijyD6d/oX6f9BbCL9kJDJzfg_prBZoAihniNijyD6d_69785d53557e8fbbe99a4c7d_1770370619138_completion_certificate.pdf",
+            github: null
+        },
+        {
+            title: "JPMorgan Chase Software Engineering Simulation",
+            category: "Financial Technology",
+            description: "Completed hands-on tasks simulating real-world software engineering at JPMorgan Chase. Built production-level integrations with Kafka, H2 database, and RESTful APIs for financial data processing systems.",
+            tech: ["Java", "Spring Boot", "Kafka", "H2 Database", "REST API"],
+            link: "https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_69785d53557e8fbbe99a4c7d_1770121208401_completion_certificate.pdf",
+            github: "https://github.com/prajapat23puneet/forage-midas"
         },
         {
             title: "Sign Language Recognition",
