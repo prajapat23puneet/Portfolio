@@ -32,6 +32,14 @@ const Projects = () => {
             github: "https://github.com/prajapat23puneet/vyaapar-nexus-core"
         },
         {
+            title: "JPMorgan Chase Software Engineering Simulation",
+            category: "Financial Technology",
+            description: "Completed hands-on tasks simulating real-world software engineering at JPMorgan Chase. Built production-level integrations with Kafka, H2 database, and RESTful APIs for financial data processing systems.",
+            tech: ["Java", "Spring Boot", "Kafka", "H2 Database", "REST API"],
+            link: "https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_69785d53557e8fbbe99a4c7d_1770121208401_completion_certificate.pdf",
+            github: "https://github.com/prajapat23puneet/forage-midas"
+        },
+        {
             title: "Sign Language Recognition",
             category: "Research Paper",
             description: "Published research on using Computer Vision to bridge communication gaps for the hearing impaired. Achieved 95% accuracy.",
