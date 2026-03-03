@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import LoadingSpinner from './components/LoadingSpinner';
 import LazySection from './components/LazySection';
 import AvailabilityBanner from './components/AvailabilityBanner';
-import { SpeedInsights } from '@vercel/speed-insights/react'; 
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from '@vercel/analytics/react';
 
 import ErrorBoundary from './components/ErrorBoundary';
@@ -20,7 +20,6 @@ function App() {
   return (
     <ThemeProvider>
       <div className="App">
-        <SpeedInsights />  {}
         <div className="ambient-blob blob-1"></div>
         <div className="ambient-blob blob-2"></div>
         <Navbar />
@@ -48,6 +47,7 @@ function App() {
             </LazySection>
           </ErrorBoundary>
         </Suspense>
+        <SpeedInsights />
         <Analytics />
       </div>
     </ThemeProvider>
