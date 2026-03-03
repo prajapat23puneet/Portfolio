@@ -6,6 +6,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 import LazySection from './components/LazySection';
 import AvailabilityBanner from './components/AvailabilityBanner';
 import { SpeedInsights } from '@vercel/speed-insights/react'; 
+import { Analytics } from '@vercel/analytics/react';
 
 import ErrorBoundary from './components/ErrorBoundary';
 
@@ -47,6 +48,7 @@ function App() {
             </LazySection>
           </ErrorBoundary>
         </Suspense>
+        <Analytics />
       </div>
     </ThemeProvider>
   );
