@@ -14,9 +14,6 @@ Disallow: /
 User-agent: ChatGPT-User
 Disallow: /
 
-User-agent: Google-Extended
-Disallow: /
-
 # Sitemap location
 Sitemap: https://puneet.is-a.dev/sitemap.xml
 
