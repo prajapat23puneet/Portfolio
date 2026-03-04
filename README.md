@@ -22,6 +22,7 @@
 ## 🎯 Overview
 
 A **production-grade portfolio website** built with modern web technologies, demonstrating best practices in:
+
 - **Performance optimization** (Lighthouse 98/100, <2s load time)
 - **Security hardening** (CSP headers, XSS protection, rate limiting)
 - **Responsive design** (mobile-first, adaptive layouts)
@@ -46,6 +47,7 @@ A **production-grade portfolio website** built with modern web technologies, dem
 ### 🎨 Visual Design
 
 **Neo-Glassmorphism Aesthetic:**
+
 ```css
 /* Custom glass effect with backdrop blur */
 .glass {
@@ -58,6 +60,7 @@ A **production-grade portfolio website** built with modern web technologies, dem
 ```
 
 **Features:**
+
 - **Dual theme system** - Dark (Synthwave) + Light (Frost)
 - **Smooth animations** - Framer Motion for entrance effects
 - **Ambient blobs** - Floating gradient backgrounds
@@ -67,6 +70,7 @@ A **production-grade portfolio website** built with modern web technologies, dem
 ### 🚀 Performance Optimizations
 
 **Code Splitting & Lazy Loading:**
+
 ```javascript
 // Lazy load non-critical sections
 const About = lazy(() => import('./components/About'));
@@ -83,12 +87,14 @@ const Contact = lazy(() => import('./components/Contact'));
 ```
 
 **Image Optimization:**
+
 - **Preloading strategy** - Current theme images load first
 - **Deferred loading** - Alternate theme loads after 2s delay
 - **WebP format** - 30-50% smaller than PNG
 - **Responsive sizing** - Optimized for viewport
 
 **Performance Metrics:**
+
 ```
 First Contentful Paint (FCP): <1.5s
 Largest Contentful Paint (LCP): <2.0s
@@ -102,6 +108,7 @@ Bundle Size: ~180KB gzipped (React 18 included!)
 **Defense in Depth:**
 
 1. **Content Security Policy (CSP)**
+
 ```apache
 Content-Security-Policy: 
   default-src 'self'; 
@@ -112,7 +119,8 @@ Content-Security-Policy:
   font-src 'self' https://fonts.gstatic.com;
 ```
 
-2. **Input Validation & Sanitization**
+1. **Input Validation & Sanitization**
+
 ```javascript
 // XSS Prevention
 import DOMPurify from 'dompurify';
@@ -133,7 +141,8 @@ export const isValidURL = (url) => {
 };
 ```
 
-3. **Rate Limiting**
+1. **Rate Limiting**
+
 ```javascript
 // Client-side rate limiter
 class RateLimiter {
@@ -148,7 +157,8 @@ class RateLimiter {
 }
 ```
 
-4. **Bot Detection**
+1. **Bot Detection**
+
 ```javascript
 // Honeypot field (invisible to users, visible to bots)
 <input 
@@ -166,7 +176,8 @@ if (isHoneypotFilled(honeypot)) {
 }
 ```
 
-5. **Security Headers**
+1. **Security Headers**
+
 ```
 X-Frame-Options: DENY
 X-Content-Type-Options: nosniff
@@ -178,6 +189,7 @@ Permissions-Policy: camera=(), microphone=(), geolocation=()
 ### 📱 Responsive Design
 
 **Mobile-First Approach:**
+
 ```css
 /* Base styles for mobile */
 .hero-container {
@@ -195,6 +207,7 @@ Permissions-Policy: camera=(), microphone=(), geolocation=()
 ```
 
 **Breakpoints:**
+
 - Mobile: 320px - 767px
 - Tablet: 768px - 1023px
 - Desktop: 1024px+
@@ -202,6 +215,7 @@ Permissions-Policy: camera=(), microphone=(), geolocation=()
 ### 🎭 Dynamic Content
 
 **Availability Banner:**
+
 ```javascript
 // Real-time status indicator
 <div className="availability-status">
@@ -216,6 +230,7 @@ Remote: Market Rate (APAC/MENA aligned)
 ```
 
 **Smart Contact System:**
+
 ```javascript
 // Opens Gmail compose (avoids email harvesters)
 const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
@@ -228,6 +243,7 @@ const email = atob(encoded); // Decoded on-the-fly
 ### 🧩 Component Architecture
 
 **Modular Structure:**
+
 ```
 src/
 ├── components/
@@ -431,7 +447,8 @@ npm run dev
 ```
 
 **Access the site:**
-- 🌐 Local: http://localhost:5173
+
+- 🌐 Local: <http://localhost:5173>
 - 🔥 Hot reload enabled
 
 ### Build for Production
@@ -490,6 +507,7 @@ Lazy Loaded:          ~20KB (per section)
 ### Why React 18 (Not Next.js)?
 
 **Reasoning:** Portfolio is a static site, no SSR needed
+
 - ✅ Faster build times (Vite vs Next.js)
 - ✅ Simpler deployment (static files)
 - ✅ Lower bundle size (no SSR overhead)
@@ -498,6 +516,7 @@ Lazy Loaded:          ~20KB (per section)
 ### Why Vite (Not Webpack/CRA)?
 
 **Reasoning:** Next-generation build tool
+
 - ✅ Lightning-fast HMR (<50ms)
 - ✅ Native ESM support
 - ✅ Smaller bundle sizes
@@ -506,6 +525,7 @@ Lazy Loaded:          ~20KB (per section)
 ### Why Tailwind CSS?
 
 **Reasoning:** Utility-first for rapid development
+
 - ✅ No CSS naming conflicts
 - ✅ Automatic purging (smaller production builds)
 - ✅ Consistent design system
@@ -514,6 +534,7 @@ Lazy Loaded:          ~20KB (per section)
 ### Why Manual Deployment (Not Vercel Auto-Deploy)?
 
 **Reasoning:** Educational + control
+
 - ✅ Understanding CI/CD pipelines
 - ✅ Custom deployment scripts
 - ✅ Environment variable management
@@ -700,7 +721,7 @@ MIT License - Feel free to use this as inspiration for your own portfolio
 
 <div align="center">
 
-### ⭐ If this portfolio helped you build yours, consider starring it!
+### ⭐ If this portfolio helped you build yours, consider starring it
 
 **Built with attention to performance, security, and user experience**
 
